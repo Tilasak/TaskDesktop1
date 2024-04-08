@@ -1,0 +1,21 @@
+﻿<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Task1.AddNotePage">
+
+    <StackLayout Padding="20">
+        <Entry Placeholder="Введите заголовок заметки"
+               BackgroundColor="AntiqueWhite"
+               TextColor="Black"
+               x:Name="TitleEntry" />
+        <Editor Placeholder="Введите содержание заметки"
+                BackgroundColor="AntiqueWhite"
+                TextColor="Black"
+                x:Name="DetailsEditor"
+                HeightRequest="150" 
+                />
+        <Button Text="Сохранить"
+                Clicked="OnSaveClicked"
+                BackgroundColor="DarkOrange"
+                />
+    </StackLayout>
+</ContentPage>
