@@ -3,23 +3,23 @@
              x:Class="Task1.AddNotePage">
 
     <StackLayout Padding="20">
-        <Entry Placeholder="Введите заголовок заметки"
-               PlaceholderColor="Black"
-               BackgroundColor="AntiqueWhite"
-               TextColor="Black"
-               x:Name="TitleEntry" />
-        <Editor Placeholder="Введите содержание заметки"
-                PlaceholderColor="Black"
-                BackgroundColor="AntiqueWhite"
-                TextColor="Black"
-                
-                x:Name="DetailsEditor"
-                HeightRequest="150" 
-                />
-        <Button Text="Сохранить"
-                Clicked="OnSaveClicked"
-                BackgroundColor="DarkOrange"
-                CornerRadius="10"
-                />
+
+        <Switch IsVisible="{Binding IsTask}"
+        x:Name="IsTaskSwitch"
+        Margin="5"
+        VerticalOptions="End"
+        IsToggled="{Binding IsTask}" />
+        <StackLayout>
+            <Entry Placeholder="{Binding TitleEntryPlaceholder}"  x:Name="TitleEntry" VerticalOptions="Start" />
+            <Editor Placeholder="{Binding DetailsEditorPlaceholder}" x:Name="DetailsEditor"  HeightRequest="150" />
+            <Button Text="Добавить"
+            BackgroundColor="DarkOrange"
+            Clicked="OnSaveClicked"
+            HorizontalOptions="End"
+            VerticalOptions="End"
+            Margin="20"
+            CornerRadius="10"/>
+        </StackLayout>
+
     </StackLayout>
 </ContentPage>

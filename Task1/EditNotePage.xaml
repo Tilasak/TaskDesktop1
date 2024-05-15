@@ -3,16 +3,17 @@
              x:Class="Task1.EditNotePage">
 
     <StackLayout Padding="20">
-        <!-- Изменяем элементы управления для отображения информации о выбранной заметке -->
+        <!-- Изменяем элементы для отображения информации о выбранной заметке -->
         <StackLayout>
-            <Entry Placeholder="Введите заголовок заметки" x:Name="TitleEntry" Text="{Binding Title}" />
-            <Editor Placeholder="Введите содержание заметки" x:Name="DetailsEditor" Text="{Binding Details}" />
+            <Entry Placeholder="Введите заголовок" x:Name="TitleEntry" Text="{Binding Title}" />
+            <Editor Placeholder="Введите содержание" x:Name="DetailsEditor" Text="{Binding Details}" />
             <Button Text="Сохранить"
                     Clicked="OnSaveClicked"
                     CornerRadius="10"/>
             <Button Text="Удалить" 
                     Clicked="OnDeleteClicked"
                     CornerRadius="10"/>
+            
         </StackLayout>
     </StackLayout>
 </ContentPage>

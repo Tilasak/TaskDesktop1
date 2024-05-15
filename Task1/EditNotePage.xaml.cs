@@ -9,18 +9,18 @@ namespace Task1
     public partial class EditNotePage : ContentPage
     {
         private MainPage _mainPage;
-        private Note _note;
+        private Note? _note; // Добавляем ? после типа, чтобы сделать его допускающим значения NULL
+
 
         public EditNotePage(MainPage mainPage, Note note)
         {
             InitializeComponent();
             _mainPage = mainPage;
             _note = note;
-            TitleEntry.Text = _note.Title;
-            DetailsEditor.Text = _note.Details;
+            // Устанавливаем заголовок и содержание заметки в поля редактирования
+            TitleEntry.Text = _note?.Title; // Добавляем проверку на null
+            DetailsEditor.Text = _note?.Details; // Добавляем проверку на null
         }
-
-
 
         private void OnDeleteClicked(object sender, EventArgs e)
         {
