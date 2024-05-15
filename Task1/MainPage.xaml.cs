@@ -27,5 +27,26 @@ namespace Task1
         {
             Notes.Add(new Note { Title = title, Details = details });
         }
+
+        // Метод для обновления существующей заметки
+        public async void OnUpdateNoteClicked(Note note)
+        {
+            // Создаем новую страницу для редактирования заметки и передаем в нее выбранную заметку
+            await Navigation.PushAsync(new EditNotePage(this, note));
+        }
+
+        // Метод для удаления заметки из коллекции
+        public void OnDeleteNoteClicked(Note note)
+        {
+            // Удаляем выбранную заметку из коллекции
+            Notes.Remove(note);
+        }
+        private async void NoteItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            var selectedNote = (Note)e.Item;
+            await Navigation.PushAsync(new EditNotePage(this, selectedNote));
+        }
+
+
     }
 }

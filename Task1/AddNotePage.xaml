@@ -4,18 +4,22 @@
 
     <StackLayout Padding="20">
         <Entry Placeholder="Введите заголовок заметки"
+               PlaceholderColor="Black"
                BackgroundColor="AntiqueWhite"
                TextColor="Black"
                x:Name="TitleEntry" />
         <Editor Placeholder="Введите содержание заметки"
+                PlaceholderColor="Black"
                 BackgroundColor="AntiqueWhite"
                 TextColor="Black"
+                
                 x:Name="DetailsEditor"
                 HeightRequest="150" 
                 />
         <Button Text="Сохранить"
                 Clicked="OnSaveClicked"
                 BackgroundColor="DarkOrange"
+                CornerRadius="10"
                 />
     </StackLayout>
 </ContentPage>

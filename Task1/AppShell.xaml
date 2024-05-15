@@ -11,6 +11,6 @@
         Title="Task desktop"
         ContentTemplate="{DataTemplate local:MainPage}"
         Route="MainPage"
-        Shell.TitleColor="White"/>
+        Shell.TitleColor = "Orange"/>
 
 </Shell>

@@ -63,6 +63,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="EditNotePage.xaml.cs">
+	    <DependentUpon>EditNotePage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="AddNotePage.xaml.cs">
 	    <DependentUpon>AddNotePage.xaml</DependentUpon>
 	  </Compile>
@@ -72,6 +75,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="EditNotePage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="AddNotePage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

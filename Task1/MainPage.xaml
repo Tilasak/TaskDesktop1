@@ -6,7 +6,7 @@
         <CollectionView Grid.Row="0" ItemsSource="{Binding Notes}">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <Frame Padding="10" Margin="5" BackgroundColor="DarkOrange" CornerRadius="5">
+                    <Frame Padding="10" Margin="5" BackgroundColor="DarkOrange" CornerRadius="10">
                         <StackLayout>
                             <Label Text="{Binding Title}" FontAttributes="Bold" />
                             <Label Text="{Binding Details}" />
@@ -21,7 +21,31 @@
                 Clicked="OnAddTaskClicked"
                 HorizontalOptions="End"
                 VerticalOptions="End" 
-                Margin="20" />
+                Margin="20"
+                CornerRadius="10"/>
+        <!-- Добавляем обработчик события ItemTapped к коллекции заметок -->
+        <ListView ItemsSource="{Binding Notes}" ItemTapped="NoteItemTapped">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Padding="10" Margin="5" BackgroundColor="LightGray" Orientation="Vertical">
+                            <Label Text="{Binding Title}" FontSize="16" />
+                            <Label Text="{Binding Details}" FontSize="14" />
+                            <Label Text="{Binding CreationDateTime, StringFormat='Created: {0}'}" FontSize="12" TextColor="Gray"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Добавить задачу" 
+                BackgroundColor="DarkOrange" 
+                Clicked="OnAddTaskClicked"
+                HorizontalOptions="End"
+                VerticalOptions="End" 
+                Margin="20"
+                CornerRadius="10"/>
+        
+
     </Grid>
 
 </ContentPage>
